@@ -31,18 +31,44 @@
       <header class="page-intro">
         <p class="eyebrow">Projects / Publications</p>
         <h1>Work &amp; Research</h1>
-        <p class="lead">A closer look at what I’ve built, contributed to, and learned.</p>
+        <p class="lead">
+          A closer look at what I’ve built, contributed to, and learned.
+        </p>
       </header>
-      <section class="projects-section" id="projects" aria-labelledby="projects-title">
+      <section
+        class="projects-section"
+        id="projects"
+        aria-labelledby="projects-title"
+      >
         <h2 id="projects-title">Selected projects</h2>
-        <div class="project-filters" role="group" aria-label="Filter projects by topic" hidden>
-          <button type="button" class="filter-button" data-filter="all" aria-pressed="true">
+        <div
+          class="project-filters"
+          role="group"
+          aria-label="Filter projects by topic"
+          hidden
+        >
+          <button
+            type="button"
+            class="filter-button"
+            data-filter="all"
+            aria-pressed="true"
+          >
             All projects
           </button>
-          <button type="button" class="filter-button" data-filter="robotics" aria-pressed="false">
+          <button
+            type="button"
+            class="filter-button"
+            data-filter="robotics"
+            aria-pressed="false"
+          >
             Robotics
           </button>
-          <button type="button" class="filter-button" data-filter="climate" aria-pressed="false">
+          <button
+            type="button"
+            class="filter-button"
+            data-filter="climate"
+            aria-pressed="false"
+          >
             Climate tech
           </button>
           <button
@@ -63,30 +89,35 @@
             <div>
               <p class="eyebrow">01 / Robotics</p>
               <h3>DroneRanger</h3>
-              <p class="project-subtitle">Autonomous wildlife deterrence, tested in simulation.</p>
+              <p class="project-subtitle">
+                Autonomous wildlife deterrence, tested in simulation.
+              </p>
             </div>
             <span class="recognition">IEEE CCWC 2026</span>
           </div>
           <div class="project-body">
             <div>
               <p>
-                A research project exploring how a drone can patrol an area and deter wildlife
-                without physical contact. The system connects perception, navigation, and flight
-                control through a simulation-first workflow.
+                A research project exploring how a drone can patrol an area and
+                deter wildlife without physical contact. The system connects
+                perception, navigation, and flight control through a
+                simulation-first workflow.
               </p>
               <h4>My contribution</h4>
               <ul class="detail-list">
                 <li>
-                  Developed ROS 2 / PX4 offboard control with staged takeoff, hover, and pursuit at
-                  30 Hz, including altitude and movement limits.
+                  Developed ROS 2 / PX4 offboard control with staged takeoff,
+                  hover, and pursuit at 30 Hz, including altitude and movement
+                  limits.
                 </li>
                 <li>
-                  Implemented stateful obstacle avoidance with blocked-direction memory and recovery
-                  behavior.
+                  Implemented stateful obstacle avoidance with blocked-direction
+                  memory and recovery behavior.
                 </li>
                 <li>
-                  Integrated ROS 2 with PX4 and Unity/Gazebo, including coordinate conversion and
-                  DDS interfaces, and co-authored the conference paper.
+                  Integrated ROS 2 with PX4 and Unity/Gazebo, including
+                  coordinate conversion and DDS interfaces, and co-authored the
+                  conference paper.
                 </li>
               </ul>
             </div>
@@ -117,22 +148,28 @@
           <div class="project-body">
             <div>
               <p>
-                Our hackathon team built a web platform for climate alerts and community disaster
-                response. People can share requests, offer support, and find relevant community
-                information.
+                Our hackathon team built a web platform for climate alerts and
+                community disaster response. People can share requests, offer
+                support, and find relevant community information.
               </p>
               <h4>What our team built</h4>
               <ul class="detail-list">
                 <li>
-                  A community feed for official information, requests for help, and offers of
-                  assistance.
+                  A community feed for official information, requests for help,
+                  and offers of assistance.
                 </li>
-                <li>Post categories and filtering to help visitors find relevant resources.</li>
-                <li>AI-assisted summaries of previous disasters and response measures.</li>
+                <li>
+                  Post categories and filtering to help visitors find relevant
+                  resources.
+                </li>
+                <li>
+                  AI-assisted summaries of previous disasters and response
+                  measures.
+                </li>
               </ul>
               <p>
-                The project won first place at Northeastern University’s Silicon Valley campus
-                climate resilience hackathon.
+                The project won first place at Northeastern University’s Silicon
+                Valley campus climate resilience hackathon.
               </p>
             </div>
             <aside class="project-facts" aria-label="Climate Shield details">
@@ -151,34 +188,43 @@
             >
           </div>
         </article>
-        <article class="project" id="llm-inference" data-category="infrastructure">
+        <article
+          class="project"
+          id="llm-inference"
+          data-category="infrastructure"
+        >
           <div class="project-heading">
             <div>
               <p class="eyebrow">03 / AI infrastructure</p>
               <h3>LLM Inference on Kubernetes</h3>
-              <p class="project-subtitle">Learning what makes GPU workloads different.</p>
+              <p class="project-subtitle">
+                Learning what makes GPU workloads different.
+              </p>
             </div>
             <span class="project-kind">Independent project</span>
           </div>
           <div class="project-body">
             <div>
               <p>
-                A small, single-GPU environment for deploying a vLLM service and investigating
-                startup behavior, resource limits, and failure recovery. This is an experimental
-                learning project.
+                A small, single-GPU environment for deploying a vLLM service and
+                investigating startup behavior, resource limits, and failure
+                recovery. This is an experimental learning project.
               </p>
               <h4>What I explored</h4>
               <ul class="detail-list">
                 <li>
-                  Served Qwen2.5-1.5B-Instruct through an OpenAI-compatible API on Kubernetes.
+                  Served Qwen2.5-1.5B-Instruct through an OpenAI-compatible API
+                  on Kubernetes.
                 </li>
                 <li>
-                  Reproduced a restart loop caused by a liveness probe firing before model loading
-                  completed, then introduced a startup probe.
+                  Reproduced a restart loop caused by a liveness probe firing
+                  before model loading completed, then introduced a startup
+                  probe.
                 </li>
                 <li>
-                  Investigated a rolling-update deadlock when two pods competed for one GPU, and
-                  documented the availability tradeoff of a Recreate deployment strategy.
+                  Investigated a rolling-update deadlock when two pods competed
+                  for one GPU, and documented the availability tradeoff of a
+                  Recreate deployment strategy.
                 </li>
               </ul>
             </div>
@@ -191,7 +237,8 @@
           </div>
           <div class="link-row">
             <a href="https://github.com/Prostream/llm-inference-on-k8s"
-              >Repository &amp; engineering notes <span aria-hidden="true">↗</span></a
+              >Repository &amp; engineering notes
+              <span aria-hidden="true">↗</span></a
             >
           </div>
         </article>
@@ -207,25 +254,33 @@
         </div>
         <article>
           <p class="eyebrow">IEEE CCWC 2026 · Conference paper</p>
-          <h3>DroneRanger: Simulation-Guided UAV Framework for Autonomous Wildlife Deterrence</h3>
+          <h3>
+            DroneRanger: Simulation-Guided UAV Framework for Autonomous Wildlife
+            Deterrence
+          </h3>
           <p class="muted">
-            Bridging PX4, ROS 2, and Unity through a Simulation-Driven Control Architecture that
-            Enables Autonomous Navigation And Obstacle-Aware Wildlife Deterrence
+            Bridging PX4, ROS 2, and Unity through a Simulation-Driven Control
+            Architecture that Enables Autonomous Navigation And Obstacle-Aware
+            Wildlife Deterrence
           </p>
           <p>
-            Zhipeng Ling, Renxiang Yin, <strong>Chunzhang Liu</strong>, Xiaoman Zou, Jiading Zhou,
-            Ilmi Yoon, and Tanishq Pradhan.
+            Zhipeng Ling, Renxiang Yin, <strong>Chunzhang Liu</strong>, Xiaoman
+            Zou, Jiading Zhou, Ilmi Yoon, and Tanishq Pradhan.
           </p>
           <p>
-            2026 IEEE 16th Annual Computing and Communication Workshop and Conference, pp.
-            1221–1227.
+            2026 IEEE 16th Annual Computing and Communication Workshop and
+            Conference, pp. 1221–1227.
           </p>
           <a href="https://doi.org/10.1109/CCWC67433.2026.11393823"
             >Read the paper <span aria-hidden="true">↗</span></a
           >
         </article>
       </section>
-      <section class="page-section publication-section" id="patents" aria-labelledby="patent-title">
+      <section
+        class="page-section publication-section"
+        id="patents"
+        aria-labelledby="patent-title"
+      >
         <div class="section-heading">
           <p class="eyebrow">Intellectual property</p>
           <h2 id="patent-title">Patent</h2>
@@ -233,7 +288,8 @@
         <article>
           <p class="eyebrow">CN114091586</p>
           <h3>
-            Account identification model determination method and device, equipment and medium
+            Account identification model determination method and device,
+            equipment and medium
           </h3>
           <a href="https://patents.google.com/?q=CN114091586"
             >Find the patent record <span aria-hidden="true">↗</span></a
@@ -242,8 +298,13 @@
       </section>
       <section class="contact-section" aria-labelledby="work-contact-title">
         <div>
-          <h2 id="work-contact-title">Want to talk about one of these projects?</h2>
-          <p>I’d be happy to discuss the engineering decisions and what I learned.</p>
+          <h2 id="work-contact-title">
+            Want to talk about one of these projects?
+          </h2>
+          <p>
+            I’d be happy to discuss the engineering decisions and what I
+            learned.
+          </p>
         </div>
         <a class="primary-link" href="mailto:liucz3@outlook.com"
           >Get in touch <span aria-hidden="true">↗</span></a

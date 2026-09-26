@@ -1,106 +1,76 @@
 # Project 1 design document
 
-**Author:** Chunzhang Liu
+Author: Chunzhang Liu
 
-**Project:** Personal homepage
+## Project description
 
-**Date:** September 26, 2026
+A personal homepage that introduces my education, experience at Nokia and SPDB, projects, publication and patent. Its goal is to help recruiters and professional contacts understand my background quickly and get in touch.
 
-## 1. Project description
+The site uses HTML, CSS and a JavaScript ES module. It has three pages, a simple career journey, and project filters. The design uses a light background, dark text, red links, and a single mobile breakpoint.
 
-Create a personal homepage that gives visitors a quick, accurate overview of my education, professional experience, projects, publication, and patent. The goal is to support job applications and professional networking. Visitors should be able to understand what I do, find evidence in projects or repositories, and contact me without searching through a long resume.
+## User personas and stories
 
-The primary content is my experience at Nokia and Shanghai Pudong Development Bank, my studies at Northeastern University and Sichuan University, and three selected projects: DroneRanger, Climate Shield, and LLM Inference on Kubernetes.
+| Visitor          | Goal                             | User story                                                                                                                                             |
+| ---------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Recruiter / HR   | Check my background for a role   | As a recruiter opening my application link, I want to quickly read my education and experience so I can decide whether my background matches the role. |
+| Course professor | Evaluate Project 1               | As the professor opening my submission, I want to visit each page and try the interactions so I can check the Project 1 requirements.                  |
+| Classmate        | Find a potential teammate        | As a classmate, I want to see my projects and technologies so I can decide whether we could work together.                                             |
+| Colleague        | Learn about me and stay in touch | As a colleague following a shared link, I want a quick introduction and contact details so we can stay in touch.                                       |
 
-The implementation uses only HTML5, CSS3, and JavaScript ES modules. Three separate HTML pages are hosted on GitHub Pages. An interactive career journey connects my background to my current interests. The visual style is restrained: warm white, dark text, red accents, simple dividers, and system fonts. Northeastern is identified in the education text; this is a personal site, not an official university website.
+## Page mockups
 
-### Intended outcomes
+These simple wireframes describe the current layout. All pages share the navigation and footer.
 
-- A recruiter can find my current degree, graduation date, two work experiences, projects, and contact details quickly.
-- A professor can visit all three pages, try the original JavaScript interactions, and inspect the repository against Project 1 requirements.
-- A potential collaborator can open project details and repositories to understand the work.
-- A colleague can find my professional links and contact me.
+### Home
 
-## 2. User personas
+```text
+Name                       Home | Work & Research | Interests (AI)
+------------------------------------------------------------------
+Introduction and expected graduation
+Work link / Email / GitHub / LinkedIn
+------------------------------------------------------------------
+Nokia logo + role          Experience description
+SPDB logo + role           Experience description
+------------------------------------------------------------------
+Career journey: Security | Banking | Graduate study | Cloud & AI
+Selected story (graduate study introduces relevant courses)
+------------------------------------------------------------------
+DroneRanger          Climate Shield          LLM inference
+------------------------------------------------------------------
+Let's connect — Feel free to reach out!       Email
+Footer / Source / LinkedIn
+```
 
-These are representative visitor scenarios, not claims about specific people.
+### Work & Research
 
-| Visitor                          | Situation and goal                                                                 | What the site needs to provide                                                                                                                      |
-| -------------------------------- | ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Recruiter / HR                   | Opens a link from my application and has limited time to understand my background. | A short introduction, work history, technical experience, graduation date, selected projects, and contact links.                                    |
-| Course professor                 | Visits the submitted website to evaluate Project 1.                                | Working page navigation, an original interactive feature, access to the source repository, and clear identification of the third AI-generated page. |
-| Classmate                        | Wants to learn about my skills before discussing a team project.                   | Concrete project descriptions, technologies, and repository links.                                                                                  |
-| Colleague / professional contact | Follows a shared link to learn more about me and stay in touch.                    | A brief professional introduction, areas of interest, LinkedIn, and email.                                                                          |
+```text
+Shared navigation
+Page introduction
+All projects | Robotics | Climate tech | AI infrastructure
+Project description                 Technology and dates
+Repository / evidence links
+(repeat for each visible project)
+Publication: title, authors, venue, DOI
+Patent: number and title
+Contact and footer
+```
 
-## 3. User stories
+### Interests (AI)
 
-### Recruiting
+```text
+Shared navigation
+Introduction + AI-generated page note
+01  Backend systems
+02  AI infrastructure
+03  Autonomous systems
+About this page
+Footer
+```
 
-As a recruiter opening a link from Chunzhang's application, I want to quickly read his education and work experience so I can decide whether his background matches the role.
+On phones, work experience and project columns stack vertically, navigation wraps, and journey buttons form two columns. Native links and buttons support keyboard use. Selected controls use `aria-pressed`; images have alternative text. Without JavaScript, every project and journey story remains readable.
 
-**Example path:** Home → introduction and graduation date → Nokia and SPDB → selected project → email or LinkedIn.
+## Files and checks
 
-### Project 1 review
+Content is edited in the three HTML files. CSS, JavaScript and images have separate folders. The career journey and project filters share `js/main.js`. GitHub Pages hosts the static files without a build step. `scripts/serve.mjs` is only for local preview.
 
-As the course professor opening Chunzhang's submission, I want to visit each page and try the interactive features so I can check whether the website meets the Project 1 requirements.
-
-**Example path:** Home → click the career-journey buttons → Work & Research → filter projects → Interests (AI) → Site source.
-
-### Teamwork
-
-As a classmate looking for a teammate, I want to read about Chunzhang's projects and the technologies he used so I can see whether we could work together.
-
-**Example path:** Work & Research → choose a topic → read a project → open its repository → contact Chunzhang.
-
-### Networking
-
-As a colleague following a shared link, I want to learn what Chunzhang has worked on and find his contact details so we can stay in touch.
-
-**Example path:** Home → introduction → work history or projects → LinkedIn or email.
-
-## 4. Page structure and design mockups
-
-The following low-fidelity mockups show content placement and navigation. They are intentionally simple so they can be compared directly with the HTML implementation.
-
-![Desktop wireframes of the three pages](mockups/desktop.svg)
-
-![Mobile wireframe of the homepage](mockups/mobile.svg)
-
-### Home — `index.html`
-
-1. Shared header: name and three page links.
-2. Introduction, links to work/contact, and a compact education/focus summary.
-3. Nokia and SPDB experience.
-4. Four-stage education/career journey, with one selected story at a time.
-5. Three selected project previews.
-6. Contact section and footer with source/LinkedIn links.
-
-### Work & Research — `work.html`
-
-1. Shared header and a short introduction.
-2. Native project-filter buttons: All, Robotics, Climate tech, AI infrastructure.
-3. Project articles describing the problem, engineering work, technology, and evidence links.
-4. DroneRanger publication and the supplied patent number/title.
-5. Contact section and shared footer.
-
-### Interests (AI) — `ai.html`
-
-1. Shared header and a visible AI-generation note.
-2. Three interest areas connected to the actual experience: backend reliability, AI infrastructure, and autonomous systems.
-3. AI disclosure and related project links.
-
-### Layout and accessibility decisions
-
-- Desktop: a maximum-width reading area, two-column introduction and experience rows, and three project previews using Flexbox.
-- Mobile: one reading column; navigation wraps and the journey buttons form a two-by-two layout.
-- Styling: neutral background, dark body text, red links and active states, light-gray information panels, and no decorative animation.
-- Navigation: ordinary links connect separate HTML URLs. IDs are used for anchor targets; classes identify elements for styling and script behavior.
-- Interaction: native buttons support keyboard activation, visible focus, and `aria-pressed`. Live regions announce journey/filter updates. A skip link jumps to main content.
-- Images: initials monogram with an alternative description, plus a favicon.
-- Progressive enhancement: essential content is already in HTML. If JavaScript is unavailable, every journey entry and project remains readable.
-
-## 5. Implementation and evaluation
-
-Content is edited directly in the HTML files. CSS, JavaScript, images, and documentation live in separate folders. JavaScript modules are small and share one entry point. The production site has no backend or runtime dependencies.
-
-Check the result through formatting/lint checks, HTML validation, desktop/mobile browser inspection, navigation, keyboard controls, and both original interactions. Course-specific tasks that cannot be completed by website code alone are tracked in [the submission guide](submission.md).
+Check the pages on desktop and mobile, try each interaction, and check the HTML with W3C Validator. This simplified version does not include ESLint configuration. The README has the remaining course notes.
