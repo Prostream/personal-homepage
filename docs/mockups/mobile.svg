@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="1050" viewBox="0 0 760 1050">
+  <title>Mobile homepage wireframe</title>
+  <desc>A single-column home page with wrapping navigation, stacked content, and a two-by-two journey control.</desc>
+  <style>text{font-family:Arial,sans-serif;fill:#242424;font-size:16px}.title{font-size:24px;font-weight:bold}.label{font-weight:bold}.small{font-size:14px}.box{fill:#f2f0eb;stroke:#c5c2bd}.line{stroke:#9b9b9b}.accent{fill:#a6192e}.white{fill:white}</style>
+  <rect width="760" height="1050" fill="#fdfcf9"/>
+  <text x="30" y="42" class="title">Mobile — Home</text>
+  <rect x="30" y="70" width="340" height="935" rx="14" fill="white" stroke="#888"/>
+  <rect x="46" y="89" width="308" height="4" class="accent"/>
+  <text x="50" y="126" class="label">Chunzhang Liu.</text><text x="50" y="156" class="small">Home | Work &amp; Research | Interests (AI)</text>
+  <rect x="50" y="180" width="300" height="130" class="box"/>
+  <text x="65" y="212" class="label">Introduction</text><text x="65" y="240" class="small">Short headline and description</text>
+  <rect x="65" y="263" width="139" height="30" class="accent"/><text x="76" y="284" class="small white">Explore my work</text>
+  <rect x="50" y="327" width="300" height="88" class="box"/><text x="65" y="358" class="label">At a glance</text><text x="65" y="390" class="small">Education · focus · graduation</text>
+  <text x="50" y="448" class="label">Work experience</text>
+  <rect x="50" y="467" width="300" height="74" class="box"/><text x="65" y="495">Nokia</text><text x="65" y="523" class="small">Dates, role, contributions</text>
+  <rect x="50" y="551" width="300" height="74" class="box"/><text x="65" y="579">SPDB</text><text x="65" y="607" class="small">Dates, role, contributions</text>
+  <text x="50" y="661" class="label">Career journey</text>
+  <rect x="50" y="678" width="300" height="66" class="box"/><line x1="200" y1="678" x2="200" y2="744" class="line"/><line x1="50" y1="711" x2="350" y2="711" class="line"/>
+  <text x="64" y="700" class="small">Security</text><text x="214" y="700" class="small">Banking</text><text x="64" y="733" class="small">Graduate study</text><text x="214" y="733" class="small">Cloud &amp; AI</text>
+  <rect x="50" y="744" width="300" height="57" class="box"/><text x="65" y="778" class="small">Selected journey story</text>
+  <text x="50" y="838" class="label">Selected work</text><text x="50" y="866" class="small">Three project previews, stacked</text>
+  <text x="50" y="920" class="label">Contact</text><text x="50" y="952" class="small">Email / LinkedIn</text><text x="50" y="983" class="small">© Author | Site source</text>
+  <text x="405" y="130" class="label">Reading order stays simple</text><text x="405" y="165">One column, no side scrolling.</text>
+  <text x="405" y="334" class="label">Profile moves below the intro</text><text x="405" y="369">No information is removed.</text>
+  <text x="405" y="479" class="label">Work rows stack</text><text x="405" y="514">Company and dates come first.</text>
+  <text x="405" y="683" class="label">Journey buttons wrap</text><text x="405" y="718">Two columns keep labels readable.</text>
+  <text x="405" y="836" class="label">Other pages follow this pattern</text><text x="405" y="871">Projects and interest rows stack.</text>
+</svg>
