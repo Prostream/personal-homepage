@@ -1,0 +1,241 @@
+/* These styles belong only to the AI journey page. */
+.journey-page {
+  background: #081c2f;
+  color: #f7f0e5;
+}
+.journey-page .container {
+  width: min(1180px, calc(100% - 64px));
+}
+.journey-page .site-header {
+  border-top-color: #e4b58c;
+  border-bottom-color: #385063;
+}
+.journey-page .site-name,
+.journey-page nav a,
+.journey-page a {
+  color: #f7f0e5;
+}
+.journey-page nav a[aria-current="page"] {
+  border-color: #e4b58c;
+}
+.journey-page a:focus-visible,
+.journey-page button:focus-visible {
+  outline: 3px solid #ffdaaa;
+  outline-offset: 5px;
+}
+.journey-page .skip-link {
+  z-index: 3;
+  background: #102837;
+}
+.journey-main {
+  position: relative;
+  isolation: isolate;
+  min-height: calc(100svh - 155px);
+  background:
+    radial-gradient(circle at 73% 42%, #ffe5ba 0 3%, transparent 9%),
+    linear-gradient(#243951, #d6a4a2 42%, #efc3a1 48%, #356476 49%, #0a2b41 80%);
+}
+.ocean-scene {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+.journey-content {
+  padding-block: 40px 32px;
+}
+.journey-heading {
+  max-width: 750px;
+  margin-bottom: 28px;
+  text-shadow: 0 2px 12px #081c2f;
+}
+.journey-kicker,
+.chapter-label {
+  color: #ffd5aa;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.journey-heading h1 {
+  margin: 4px 0 8px;
+  font:
+    64px/1.1 Georgia,
+    serif;
+  letter-spacing: -0.03em;
+}
+.journey-heading > p:last-child {
+  color: #f1e7dd;
+  font-size: 16px;
+}
+.journey-layout {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.story-panel {
+  flex: 1;
+  min-width: 0;
+  padding: 34px;
+  background: #102837;
+  border: 1px solid #426072;
+  border-radius: 3px;
+}
+.story-chapter + .story-chapter {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #426072;
+}
+.scene-ready .story-chapter {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  animation: chapter-in 300ms ease-out;
+}
+.story-chapter h2 {
+  margin: 0 0 18px;
+  font:
+    34px/1.18 Georgia,
+    serif;
+}
+.story-chapter > p:last-child {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.8;
+}
+.object-space {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  height: 385px;
+  margin: 0;
+}
+.object-caption {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  padding: 4px 14px;
+  background: #102837;
+  color: #f7f0e5;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+.journey-controls-bar {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 34px;
+}
+.chapter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  gap: 8px;
+}
+.journey-page button {
+  background: #102837;
+  color: #f7f0e5;
+  border-color: #627584;
+  font-size: 13px;
+}
+.chapter-button {
+  flex: 1;
+  text-align: left;
+}
+.chapter-button span {
+  display: block;
+  font-size: 11px;
+  color: #ffd5aa;
+}
+.journey-page button[aria-pressed="true"] {
+  color: #142b3b;
+  background: #ffd5aa;
+  border-color: #ffd5aa;
+}
+.chapter-button[aria-pressed="true"] span {
+  color: #142b3b;
+}
+.journey-page button:hover {
+  border-color: #ffd5aa;
+}
+.motion-button {
+  min-width: 128px;
+}
+.scene-fallback {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #102837;
+}
+.journey-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-block: 22px;
+  font-size: 12px;
+}
+.journey-footer p {
+  margin: 0;
+}
+.journey-page [hidden] {
+  display: none;
+}
+@keyframes chapter-in {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 760px) {
+  .journey-page .container {
+    width: calc(100% - 32px);
+  }
+  .journey-heading h1 {
+    font-size: 48px;
+  }
+  .journey-heading {
+    margin-bottom: 24px;
+  }
+  .journey-layout {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .story-panel {
+    padding: 24px;
+  }
+  .story-chapter h2 {
+    font-size: 30px;
+  }
+  .story-chapter > p:last-child {
+    font-size: 16px;
+  }
+  .object-space {
+    flex: auto;
+    width: 100%;
+    height: 300px;
+  }
+  .journey-controls-bar {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  .chapter-button {
+    flex-basis: 30%;
+  }
+  .motion-button {
+    align-self: flex-start;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scene-ready .story-chapter {
+    animation: none;
+  }
+}

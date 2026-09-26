@@ -6,124 +6,160 @@
     <meta name="author" content="Chunzhang Liu" />
     <meta
       name="description"
-      content="An AI-generated page exploring Chunzhang Liu’s professional interests in reliable backend systems, AI infrastructure, and autonomous software."
+      content="Chunzhang Liu's journey from childhood curiosity to information security, banking, studying abroad, and cloud and AI. An AI-assisted interactive story."
     />
-    <title>Professional Interests (AI) | Chunzhang Liu</title>
+    <title>My Journey (AI) | Chunzhang Liu</title>
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="css/styles.css?v=2" />
-    <script type="module" src="js/main.js?v=2"></script>
+    <link rel="stylesheet" href="css/ai.css?v=1" />
+    <script type="module" src="js/ai.js?v=1"></script>
   </head>
-  <body>
+  <body class="journey-page">
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="site-name" href="index.html"
-          >Chunzhang Liu<span class="name-dot" aria-hidden="true">.</span></a
-        >
+        <a class="site-name" href="index.html">Chunzhang Liu.</a>
         <nav aria-label="Main navigation">
-          <a href="index.html">Home</a
-          ><a href="work.html">Work &amp; Research</a
-          ><a href="ai.html" aria-current="page"
-            >Interests <span class="nav-note">(AI)</span></a
-          >
+          <a href="index.html">Home</a>
+          <a href="work.html">Work &amp; Research</a>
+          <a href="ai.html" aria-current="page">My Journey <span>(AI)</span></a>
         </nav>
       </div>
     </header>
-    <main class="container" id="main">
-      <header class="page-intro">
-        <p class="eyebrow">An AI-generated perspective</p>
-        <h1>What I’m exploring</h1>
-        <p class="lead">
-          Reliable software, useful AI, and the systems that connect them.
-        </p>
-        <p class="ai-note">
-          This page was generated with AI assistance for Project 1, using my
-          supplied resume and project materials. It describes possible
-          directions connected to that experience.
-        </p>
-      </header>
-      <div class="interest-list">
-        <section class="interest-row" aria-labelledby="interest-backend">
-          <p class="interest-number" aria-hidden="true">01</p>
-          <div>
-            <h2 id="interest-backend">
-              Backend systems that hold up in practice
-            </h2>
-            <p>
-              My work at SPDB involved transaction services, data migration, and
-              production incidents. That experience makes reliability a natural
-              area to keep exploring: how services handle failures, how data
-              stays correct, and how to make changes safely.
-            </p>
-            <p class="question">
-              A question to explore: how can a system stay understandable as its
-              scale and complexity grow?
-            </p>
-            <a href="index.html#experience-title">Related experience: SPDB</a>
+    <main class="journey-main" id="main">
+      <canvas class="ocean-scene" aria-hidden="true"></canvas>
+      <div class="container journey-content">
+        <header class="journey-heading">
+          <p class="journey-kicker">A personal journey · Five chapters</p>
+          <h1>A new horizon.</h1>
+          <p>Curiosity, a change of direction, and the possibilities ahead.</p>
+        </header>
+        <div class="journey-layout">
+          <div class="story-panel" aria-live="polite" aria-atomic="true">
+            <article class="story-chapter" id="chapter-0">
+              <p class="chapter-label">00 / Curiosity</p>
+              <h2>Where it started</h2>
+              <p>
+                I was introduced to computers as a child, and I’ve been
+                interested in them ever since. That early curiosity stayed with
+                me and eventually led me toward computer science.
+              </p>
+            </article>
+            <article class="story-chapter" id="chapter-1">
+              <p class="chapter-label">01 / Foundations</p>
+              <h2>Turning interest into a career</h2>
+              <p>
+                I switched majors and earned a bachelor’s degree in Information
+                Security at Sichuan University. After graduation, I worked on
+                backend systems at Shanghai Pudong Development Bank, where I
+                learned how much care goes into software that people rely on
+                every day.
+              </p>
+            </article>
+            <article class="story-chapter" id="chapter-2">
+              <p class="chapter-label">02 / A new direction</p>
+              <h2>Choosing a new direction</h2>
+              <p>
+                I left a stable job to study abroad and pursue a master’s degree
+                in Computer Science at Northeastern University. I wanted to
+                broaden my perspective and explore more possibilities for my
+                career.
+              </p>
+            </article>
+            <article class="story-chapter" id="chapter-3">
+              <p class="chapter-label">03 / Cloud &amp; AI</p>
+              <h2>From backend systems to cloud and AI</h2>
+              <p>
+                At Nokia, I worked on cloud infrastructure and security,
+                building on my experience with backend systems. Alongside that
+                work, I’ve been learning about AI and the infrastructure needed
+                to run it.
+              </p>
+            </article>
+            <article class="story-chapter" id="chapter-4">
+              <p class="chapter-label">04 / What comes next</p>
+              <h2>What comes next</h2>
+              <p>
+                I want to keep learning and see where my experience in backend
+                systems, cloud, security, and AI can take me. I’m open to new
+                opportunities and to meeting people I can learn from.
+              </p>
+            </article>
           </div>
-        </section>
-        <section class="interest-row" aria-labelledby="interest-ai">
-          <p class="interest-number" aria-hidden="true">02</p>
-          <div>
-            <h2 id="interest-ai">The infrastructure behind AI</h2>
-            <p>
-              Model serving brings new constraints to familiar infrastructure:
-              long startup times, limited GPU memory, and resources that cannot
-              always be shared between replicas. My vLLM project is a place to
-              investigate these constraints through small, reproducible
-              experiments.
-            </p>
-            <p class="question">
-              A question to explore: what should deployment and monitoring look
-              like when a model needs minutes to become ready?
-            </p>
-            <a href="work.html#llm-inference"
-              >Related project: LLM Inference on Kubernetes</a
+          <figure class="object-space" hidden>
+            <figcaption class="object-caption">The first spark</figcaption>
+          </figure>
+        </div>
+        <div class="journey-controls-bar" hidden>
+          <div
+            class="chapter-controls"
+            role="group"
+            aria-label="Choose a chapter"
+          >
+            <button
+              type="button"
+              class="chapter-button"
+              data-chapter="0"
+              aria-controls="chapter-0"
+              aria-pressed="true"
             >
+              <span>00</span>Curiosity
+            </button>
+            <button
+              type="button"
+              class="chapter-button"
+              data-chapter="1"
+              aria-controls="chapter-1"
+              aria-pressed="false"
+            >
+              <span>01</span>Foundations
+            </button>
+            <button
+              type="button"
+              class="chapter-button"
+              data-chapter="2"
+              aria-controls="chapter-2"
+              aria-pressed="false"
+            >
+              <span>02</span>A new direction
+            </button>
+            <button
+              type="button"
+              class="chapter-button"
+              data-chapter="3"
+              aria-controls="chapter-3"
+              aria-pressed="false"
+            >
+              <span>03</span>Cloud &amp; AI
+            </button>
+            <button
+              type="button"
+              class="chapter-button"
+              data-chapter="4"
+              aria-controls="chapter-4"
+              aria-pressed="false"
+            >
+              <span>04</span>What comes next
+            </button>
           </div>
-        </section>
-        <section class="interest-row" aria-labelledby="interest-robotics">
-          <p class="interest-number" aria-hidden="true">03</p>
-          <div>
-            <h2 id="interest-robotics">
-              Software that interacts with the physical world
-            </h2>
-            <p>
-              DroneRanger connects control logic with sensors, obstacles, and
-              movement. It offers another view of dependable software: behavior
-              needs clear limits, and simulation provides a way to investigate
-              it before running on hardware.
-            </p>
-            <p class="question">
-              A question to explore: how can simulation make autonomous behavior
-              easier to test and explain?
-            </p>
-            <a href="work.html#drone-ranger">Related project: DroneRanger</a>
-          </div>
-        </section>
+          <button class="motion-button" type="button" aria-pressed="false">
+            Pause motion
+          </button>
+        </div>
+        <p class="scene-fallback" role="status" hidden>
+          Animation is unavailable. The full story is shown above.
+        </p>
       </div>
-      <section class="page-section ai-disclosure" aria-labelledby="ai-title">
-        <h2 id="ai-title">About this page</h2>
-        <p>
-          AI helped draft this page’s content, layout, and code. It also
-          assisted with the rest of the website. The detailed disclosure is
-          pending in the
-          <a
-            href="https://github.com/Prostream/personal-homepage#use-of-generative-ai"
-            >README</a
-          >.
-        </p>
-        <p>
-          The work and research page contains the supporting project and
-          publication links.
-        </p>
-      </section>
     </main>
-    <footer class="site-footer container">
-      <p>© 2026 Chunzhang Liu</p>
-      <div class="link-row compact-links">
-        <a href="https://github.com/Prostream/personal-homepage">Site source</a
-        ><a href="https://www.linkedin.com/in/chunzhangliu/">LinkedIn</a>
+    <footer class="journey-footer container">
+      <p>© 2026 Chunzhang Liu · AI-assisted page</p>
+      <div class="link-row">
+        <a
+          href="https://github.com/Prostream/personal-homepage#use-of-generative-ai"
+          >How this page was made</a
+        ><a href="https://github.com/Prostream/personal-homepage"
+          >Site source</a
+        >
       </div>
     </footer>
   </body>

@@ -24,7 +24,7 @@ These simple wireframes describe the current layout. All pages share the navigat
 ### Home
 
 ```text
-Name                       Home | Work & Research | Interests (AI)
+Name                       Home | Work & Research | My Journey (AI)
 ------------------------------------------------------------------
 Introduction and expected graduation
 Work link / Email / GitHub / LinkedIn
@@ -55,22 +55,23 @@ Patent: number and title
 Contact and footer
 ```
 
-### Interests (AI)
+### My Journey (AI)
 
 ```text
 Shared navigation
-Introduction + AI-generated page note
-01  Backend systems
-02  AI infrastructure
-03  Autonomous systems
-About this page
-Footer
+A new horizon — sunrise sky and ocean background
+Left: one personal story      Right: one native 3D model
+Curiosity | Foundations | A new direction | Cloud & AI | What comes next
+Pause / Resume motion
+AI-assistance note / README disclosure / source
 ```
+
+Five chapters cover childhood curiosity, Information Security and banking, studying abroad, Nokia and AI, and future possibilities. Three models illustrate the story: a computer (chapters 0–1), a globe (chapter 2), and a cloud/server cluster (chapters 3–4). The dark reading panel keeps text readable over the moving scene. On phones, the story comes before the model. Without JavaScript or WebGL, the full story remains readable against a static sunrise background. See [the approved AI-page plan and prompt](ai-page-plan.md).
 
 On phones, work experience and project columns stack vertically, navigation wraps, and journey buttons form two columns. Native links and buttons support keyboard use. Selected controls use `aria-pressed`; images have alternative text. Without JavaScript, every project and journey story remains readable.
 
 ## Files and checks
 
-Content is edited in the three HTML files. CSS, JavaScript and images have separate folders. The career journey and project filters share `js/main.js`. GitHub Pages hosts the static files without a build step. `scripts/serve.mjs` is only for local preview.
+Content is edited in the three HTML files. CSS, JavaScript and images have separate folders. The homepage career journey and project filters share `js/main.js`. The AI page has its own `js/ai.js` and `css/ai.css`, with no new dependencies. GitHub Pages hosts the static files without a build step. `scripts/serve.mjs` is only for local preview.
 
 Check the pages on desktop and mobile, try each interaction, and check the HTML with W3C Validator. This simplified version does not include ESLint configuration. The README has the remaining course notes.
