@@ -59,14 +59,14 @@ Contact and footer
 
 ```text
 Shared navigation
-A new horizon — sunrise sky and ocean background
+A new horizon — mountain sunrise with drifting mist and petals
 Left: one personal story      Right: one native 3D model
 Curiosity | Foundations | A new direction | Cloud & AI | What comes next
-Pause / Resume motion
+Drag or use arrow keys to rotate the model / Pause all motion
 AI-assistance note / README disclosure / source
 ```
 
-Five chapters cover childhood curiosity, Information Security and banking, studying abroad, Nokia and AI, and future possibilities. Three models illustrate the story: a computer (chapters 0–1), a globe (chapter 2), and a cloud/server cluster (chapters 3–4). The dark reading panel keeps text readable over the moving scene. On phones, the story comes before the model. Without JavaScript or WebGL, the full story remains readable against a static sunrise background. See [the approved AI-page plan and prompt](ai-page-plan.md).
+Five chapters cover childhood curiosity, Information Security and banking, studying abroad, Nokia and AI, and future possibilities. Three models illustrate the story: a computer (chapters 0–1), a globe (chapter 2), and a cloud/server cluster (chapters 3–4). A dark gradient behind cream text keeps the animated landscape readable. Rounded models have warm lighting, gentle idle motion, drag rotation, and spring settling. On phones, the story comes before the model. Pause stops the atmosphere and models together; reduced-motion preference starts paused. Without JavaScript or WebGL, the full story remains readable against a static landscape. See [the approved revision and prompts](ai-page-v2-plan.md) and [the original ocean proposal](ai-page-plan.md).
 
 On phones, work experience and project columns stack vertically, navigation wraps, and journey buttons form two columns. Native links and buttons support keyboard use. Selected controls use `aria-pressed`; images have alternative text. Without JavaScript, every project and journey story remains readable.
 

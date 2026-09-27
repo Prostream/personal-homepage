@@ -1,6 +1,6 @@
 # AI Page Proposal: A New Horizon
 
-**Status: Approved by the user and implemented. Final visual review remains open.**
+**Status: Approved by the user and implemented. The user reviewed the visual result and requested a revision; see [the second visual proposal](ai-page-v2-plan.md).**
 
 This document translates the user's visual idea and personal story into a concrete proposal. The user reviewed this proposal and approved implementation with “可以，开始实现吧” (“Yes, start implementing”). The original proposal and prompt are retained below as a record of the process.
 
