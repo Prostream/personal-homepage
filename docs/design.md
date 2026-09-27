@@ -4,74 +4,122 @@ Author: Chunzhang Liu
 
 ## Project description
 
-A personal homepage that introduces my education, experience at Nokia and SPDB, projects, publication and patent. Its goal is to help recruiters and professional contacts understand my background quickly and get in touch.
+A personal homepage showing my education, work at Nokia and SPDB, projects, publication, and patent. The goal is to help recruiters and professional contacts understand my background and get in touch.
 
-The site uses HTML, CSS and a JavaScript ES module. It has three pages, a simple career journey, and project filters. The design uses a light background, dark text, red links, and a single mobile breakpoint.
+Home summarizes my background. Work & Research gives project details and source links. My Journey is a separate AI-assisted visual story. The site uses native HTML, CSS, and JavaScript ES modules and is hosted on GitHub Pages. It does not require sign-in or collect visitor information.
 
-## User personas and stories
+The two main pages use a light background, dark text, red links, and straightforward headings. They prioritize facts over promotional copy. The interactive career timeline and project filters help visitors find information. The AI page has a separate visual style and its own stylesheet.
 
-| Visitor          | Goal                             | User story                                                                                                                                             |
-| ---------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Recruiter / HR   | Check my background for a role   | As a recruiter opening my application link, I want to quickly read my education and experience so I can decide whether my background matches the role. |
-| Course professor | Evaluate Project 1               | As the professor opening my submission, I want to visit each page and try the interactions so I can check the Project 1 requirements.                  |
-| Classmate        | Find a potential teammate        | As a classmate, I want to see my projects and technologies so I can decide whether we could work together.                                             |
-| Colleague        | Learn about me and stay in touch | As a colleague following a shared link, I want a quick introduction and contact details so we can stay in touch.                                       |
+## User personas
 
-## Page mockups
+These are intended visitor profiles, not accounts of user interviews.
 
-These simple wireframes describe the current layout. All pages share the navigation and footer.
+| Visitor          | Context                                                 | Needs                                                                                 |
+| ---------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| Recruiter / HR   | Opens a job application link and has limited time.      | Education, graduation date, work experience, relevant projects, and contact details.  |
+| Course professor | Opens the submission to assess Project 1.               | Three pages, working interactions, source code, design document, and rubric evidence. |
+| Classmate        | Looks for a teammate or wants to understand a project.  | Technologies, individual contributions, and repository links.                         |
+| Colleague        | Follows a shared link after meeting or working with me. | A short introduction and an easy way to stay in touch.                                |
 
-### Home
+## User stories
+
+- **Recruiter:** After receiving Chunzhang's application, I open his homepage. I want to quickly find his education and work history so I can decide whether to interview him.
+- **Professor:** When reviewing Project 1, I visit all three pages and try the timeline, filters, and 3D controls. I want to check the assignment requirements and review the source.
+- **Classmate:** While looking for a teammate, I read Chunzhang's project descriptions and open a repository. I want to understand his contributions and whether our skills fit the same project.
+- **Colleague:** After following a shared link, I read the introduction and look for an email address so I can continue our conversation.
+
+## Design mockups
+
+These wireframes describe the page structure. Content is edited directly in HTML.
+
+### Home — desktop
 
 ```text
-Name                       Home | Work & Research | My Journey (AI)
-------------------------------------------------------------------
-Introduction and expected graduation
-Work link / Email / GitHub / LinkedIn
-------------------------------------------------------------------
-Nokia logo + role          Experience description
-SPDB logo + role           Experience description
-------------------------------------------------------------------
-Career journey: Security | Banking | Graduate study | Cloud & AI
-Selected story (graduate study introduces relevant courses)
-------------------------------------------------------------------
-DroneRanger          Climate Shield          LLM inference
-------------------------------------------------------------------
-Let's connect — Feel free to reach out!       Email
+Name                     Home | Work & Research | My Journey (AI)
+----------------------------------------------------------------
+Name / degree / short background / expected graduation
+Projects | Email | GitHub | LinkedIn
+----------------------------------------------------------------
+Work experience
+Nokia logo + role        Description and work details
+SPDB logo + role         Description and work details
+----------------------------------------------------------------
+Education and career
+2016–2020 | 2020–2024 | 2024–2026 | 2026
+Selected education or work entry; courses in the graduate entry
+----------------------------------------------------------------
+Projects
+DroneRanger              Climate Shield             LLM inference
+----------------------------------------------------------------
+Contact / Email
 Footer / Source / LinkedIn
 ```
 
-### Work & Research
+### Work & Research — desktop
 
 ```text
 Shared navigation
-Page introduction
+Work & Research
+----------------------------------------------------------------
 All projects | Robotics | Climate tech | AI infrastructure
-Project description                 Technology and dates
-Repository / evidence links
+Project title / brief description / result
+Contributions and details              Dates and technologies
+Repository / paper or announcement
 (repeat for each visible project)
-Publication: title, authors, venue, DOI
-Patent: number and title
-Contact and footer
+----------------------------------------------------------------
+Publication: title / authors / venue / DOI
+Patent: number / title / record link
+Contact / Email / Footer
 ```
 
-### My Journey (AI)
+### My Journey (AI) — desktop
 
 ```text
 Shared navigation
-A new horizon — mountain sunrise with drifting mist and petals
-Left: one personal story      Right: one native 3D model
-Curiosity | Foundations | A new direction | Cloud & AI | What comes next
-Drag or use arrow keys to rotate the model / Pause all motion
-AI-assistance note / README disclosure / source
+Mountain sunrise / slowly drifting mist and petals
+----------------------------------------------------------------
+A new horizon                          Interactive 3D object
+Selected personal story                Drag or use arrow keys
+----------------------------------------------------------------
+Curiosity | Foundations | A new direction | Cloud & AI | Future
+Pause / Resume motion
+Footer / AI disclosure / Source
 ```
 
-Five chapters cover childhood curiosity, Information Security and banking, studying abroad, Nokia and AI, and future possibilities. Three models illustrate the story: a computer (chapters 0–1), a globe (chapter 2), and a cloud/server cluster (chapters 3–4). A dark gradient behind cream text keeps the animated landscape readable. Rounded models have warm lighting, gentle idle motion, drag rotation, and spring settling. On phones, the story comes before the model. Pause stops the atmosphere and models together; reduced-motion preference starts paused. Without JavaScript or WebGL, the full story remains readable against a static landscape. See [the approved revision and prompts](ai-page-v2-plan.md) and [the original ocean proposal](ai-page-plan.md).
+The five chapters cover childhood curiosity, Information Security and banking, studying abroad, Nokia and AI, and future possibilities. Three objects illustrate them: a computer for chapters 0–1, a globe for chapter 2, and a cloud/server cluster for chapters 3–4. See [the reviewed AI-page plan and prompts](ai-page-v2-plan.md).
 
-On phones, work experience and project columns stack vertically, navigation wraps, and journey buttons form two columns. Native links and buttons support keyboard use. Selected controls use `aria-pressed`; images have alternative text. Without JavaScript, every project and journey story remains readable.
+### Mobile layout
 
-## Files and checks
+```text
+Name
+Home | Work & Research | My Journey (AI)
+---------------------------------------
+Introduction
+---------------------------------------
+Company logo / role
+Experience details
+---------------------------------------
+Career buttons in two columns
+Selected entry
+---------------------------------------
+Projects stacked vertically
+---------------------------------------
+Contact / Footer
+```
 
-Content is edited in the three HTML files. CSS, JavaScript and images have separate folders. The homepage career journey and project filters share `js/main.js`. The AI page has its own `js/ai.js` and `css/ai.css`, with no new dependencies. GitHub Pages hosts the static files without a build step. `scripts/serve.mjs` is only for local preview.
+Work-page project details stack above the dates and technologies. On the AI page, the story appears above the model and chapter buttons wrap. No content requires horizontal scrolling.
 
-Check the pages on desktop and mobile, try each interaction, and check the HTML with W3C Validator. This simplified version does not include ESLint configuration. The README has the remaining course notes.
+## Interaction and accessibility
+
+- Use semantic headings, navigation, articles, links, and buttons.
+- Use classes and data attributes for JavaScript selection; IDs connect headings, buttons, and section links.
+- Timeline and filter buttons show their selection with `aria-pressed` and support keyboard activation.
+- Include author/description metadata, a favicon, and alternative text for content images.
+- Preserve every story and project when JavaScript is unavailable.
+- On the AI page, maintain text contrast, provide Pause motion, and start paused for reduced-motion preference. If WebGL is unavailable, show all five story paragraphs.
+
+## Implementation and checks
+
+CSS, JavaScript, and images are in separate folders. `js/main.js` controls the timeline and project filters; `js/ai.js` handles the AI page. Flexbox provides the responsive column layout. There is no frontend library, backend, or build step. `scripts/serve.mjs` is only a local preview server.
+
+ESLint and Prettier are development tools. The [rubric checklist](rubric.md) records the completed checks and remaining course submission items. The README includes setup instructions and the GenAI disclosure.

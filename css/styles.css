@@ -87,7 +87,6 @@ nav a[aria-current="page"] {
 .eyebrow {
   color: #a6192e;
   font-size: 13px;
-  text-transform: uppercase;
 }
 .muted,
 .technology,
@@ -97,25 +96,16 @@ nav a[aria-current="page"] {
   color: #666;
   font-size: 14px;
 }
-.primary-link {
-  display: inline-block;
-  padding: 8px 16px;
-  background: #a6192e;
-  color: white;
-  text-decoration: none;
-}
 .page-section,
 .contact-section,
 .project,
-.interest-row,
 .site-footer {
   border-top: 1px solid #ddd;
   padding-block: 24px;
 }
 .experience-row,
 .project-body,
-.selected-work,
-.interest-row {
+.selected-work {
   display: flex;
   gap: 32px;
 }
@@ -164,17 +154,14 @@ button[aria-pressed="true"] {
   display: block;
 }
 .journey-entries,
-.project-facts,
-.ai-note {
+.project-facts {
   background: #f2f0eb;
   padding: 20px;
 }
 .project-facts {
   align-self: flex-start;
 }
-.recognition,
-.project-kind,
-.interest-number {
+.recognition {
   color: #a6192e;
 }
 .skip-link {

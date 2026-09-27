@@ -1,0 +1,47 @@
+# Project 1 rubric checklist
+
+Checked on September 26, 2026 against the assignment screenshots. This records evidence and open items, not a predicted grade.
+
+| Requirement                                                           | Points | Status and evidence                                                                                                                                                                                                               |
+| --------------------------------------------------------------------- | -----: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Design document: description, personas, user stories, mockups         |     80 | Included in [design.md](design.md), with desktop and mobile wireframes.                                                                                                                                                           |
+| Meaningful personal homepage                                          |     15 | Education, graduation date, Nokia/SPDB experience, projects, publication, patent, and contact links.                                                                                                                              |
+| ES6 modules                                                           |      5 | `package.json` uses `"type": "module"`; every HTML script has `type="module"`.                                                                                                                                                    |
+| Original component                                                    |      5 | Personal career timeline; the AI page also has an interactive three-model story.                                                                                                                                                  |
+| Public deployment                                                     |      5 | [GitHub Pages](https://prostream.github.io/personal-homepage/).                                                                                                                                                                   |
+| Separate resource folders                                             |      5 | `css/`, `js/`, and `images/`.                                                                                                                                                                                                     |
+| Author, description, and icon metadata                                |      5 | Present on all three pages.                                                                                                                                                                                                       |
+| Original JavaScript with more than five lines                         |      5 | Timeline and project filtering in `js/main.js`, plus the AI-page interactions. AI assistance is disclosed.                                                                                                                        |
+| Prettier formatting                                                   |      5 | Formatting check passed using Prettier 3.6.2.                                                                                                                                                                                     |
+| W3C HTML validation                                                   |      5 | All three pages returned zero errors and zero warnings. Informational notices concern trailing slashes on void tags.                                                                                                              |
+| Class ESLint configuration, no errors                                 |      5 | **Pending verification.** Standard recommended configuration and npm scripts have been restored. The class-specific file has not been located, and dependency download was declined, so ESLint has not been run in this revision. |
+| All content images have alt text                                      |      5 | Nokia/SPDB images have alt text. Background artwork and canvases are decorative.                                                                                                                                                  |
+| At least two HTML pages and a third AI page                           |      5 | `index.html`, `work.html`, and `ai.html` have distinct URLs.                                                                                                                                                                      |
+| Classes identify elements                                             |      5 | JavaScript uses class selectors and data attributes. IDs support section links and accessible labels.                                                                                                                             |
+| Standard semantic elements                                            |      5 | Native buttons, links, headings, navigation, sections, and articles.                                                                                                                                                              |
+| Organized CSS without `!important`                                    |      5 | Shared styles and AI-page styles are separate; no `!important`.                                                                                                                                                                   |
+| Grid or Flexbox layout                                                |      5 | Flexbox provides page columns, navigation, and control layouts.                                                                                                                                                                   |
+| README: author, class link, objective, screenshot, build instructions |      5 | All included. The site is static with no build step; local preview and checks are documented.                                                                                                                                     |
+| Package file lists dependencies                                       |      5 | ESLint, its rule/global packages, and Prettier are listed as development dependencies. No runtime dependencies.                                                                                                                   |
+| MIT license                                                           |      5 | Included in `LICENSE` and declared in `package.json`.                                                                                                                                                                             |
+| Short public narrated demo                                            |     15 | **Pending.** Link left blank at the author's request.                                                                                                                                                                             |
+| Correct Google Form submission, thumbnail, and links                  |      5 | **Pending.** Entry left blank at the author's request. A current screenshot and sharing metadata are available.                                                                                                                   |
+| GenAI disclosure: tools/models, prompts, and use                      |     10 | Concise English README section links the prompts and planning documents. Unavailable exact model versions are identified as unavailable.                                                                                          |
+| Course code review                                                    |     20 | **Pending.** Complete the review required by the course and retain its submission evidence.                                                                                                                                       |
+
+## Checks performed
+
+- JavaScript syntax checks passed for both browser modules, the local server, and the ESLint configuration.
+- HTML checks found no missing local assets or fragments, duplicate IDs, non-module scripts, missing content-image alt attributes, or missing author/description metadata.
+- Browser checks passed for all four timeline stages and all four project filters, including keyboard activation.
+- Home, Work, and AI pages fit a 390-pixel mobile viewport without horizontal overflow. Home and Work were also inspected at desktop width.
+- The AI page still initializes correctly after the shared stylesheet cleanup. Its page-specific design and behavior were not changed.
+- No browser console errors or warnings were observed during this revision's checks.
+- The README screenshot was refreshed to match the simpler homepage.
+
+## Remaining submissions
+
+- Public narrated video:
+- Google Form:
+- Course code review: pending.
+- Class ESLint configuration: use the instructor's file if one is provided, then install dependencies and run `npm run check`. The standard configuration is not presented as a confirmed copy of the class configuration.

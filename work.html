@@ -10,16 +10,14 @@
     />
     <title>Work &amp; Research | Chunzhang Liu</title>
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="css/styles.css?v=2" />
+    <link rel="stylesheet" href="css/styles.css?v=3" />
     <script type="module" src="js/main.js?v=2"></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="site-name" href="index.html"
-          >Chunzhang Liu<span class="name-dot" aria-hidden="true">.</span></a
-        >
+        <a class="site-name" href="index.html">Chunzhang Liu</a>
         <nav aria-label="Main navigation">
           <a href="index.html">Home</a
           ><a href="work.html" aria-current="page">Work &amp; Research</a
@@ -29,18 +27,15 @@
     </header>
     <main class="container" id="main">
       <header class="page-intro">
-        <p class="eyebrow">Projects / Publications</p>
         <h1>Work &amp; Research</h1>
-        <p class="lead">
-          A closer look at what I’ve built, contributed to, and learned.
-        </p>
+        <p>Three projects, a conference paper, and a patent.</p>
       </header>
       <section
         class="projects-section"
         id="projects"
         aria-labelledby="projects-title"
       >
-        <h2 id="projects-title">Selected projects</h2>
+        <h2 id="projects-title">Projects</h2>
         <div
           class="project-filters"
           role="group"
@@ -87,7 +82,6 @@
         <article class="project" id="drone-ranger" data-category="robotics">
           <div class="project-heading">
             <div>
-              <p class="eyebrow">01 / Robotics</p>
               <h3>DroneRanger</h3>
               <p class="project-subtitle">
                 Autonomous wildlife deterrence, tested in simulation.
@@ -98,10 +92,9 @@
           <div class="project-body">
             <div>
               <p>
-                A research project exploring how a drone can patrol an area and
-                deter wildlife without physical contact. The system connects
-                perception, navigation, and flight control through a
-                simulation-first workflow.
+                This project uses ROS 2 and PX4 to control a drone in Unity and
+                Gazebo simulations. The drone follows wildlife and avoids
+                obstacles to test non-contact deterrence.
               </p>
               <h4>My contribution</h4>
               <ul class="detail-list">
@@ -130,17 +123,16 @@
           </div>
           <div class="link-row">
             <a href="https://github.com/Prostream/DroneRanger"
-              >Project repository <span aria-hidden="true">↗</span></a
+              >Project repository </a
             ><a href="#publications">Publication details</a>
           </div>
         </article>
         <article class="project" id="climate-shield" data-category="climate">
           <div class="project-heading">
             <div>
-              <p class="eyebrow">02 / Climate tech</p>
               <h3>Climate Shield</h3>
               <p class="project-subtitle">
-                Connecting people with help during climate emergencies.
+                Climate alerts and community help requests.
               </p>
             </div>
             <span class="recognition">1st place · Silicon Valley campus</span>
@@ -149,8 +141,8 @@
             <div>
               <p>
                 Our hackathon team built a web platform for climate alerts and
-                community disaster response. People can share requests, offer
-                support, and find relevant community information.
+                community disaster response. Users can post requests for help,
+                offer help, and read alerts.
               </p>
               <h4>What our team built</h4>
               <ul class="detail-list">
@@ -176,16 +168,15 @@
               <p class="eyebrow">Team hackathon project</p>
               <p>October 2024</p>
               <p>React · Node.js · Express<br />MongoDB · Python</p>
-              <p>Climate information and community coordination.</p>
             </aside>
           </div>
           <div class="link-row">
             <a href="https://github.com/Prostream/Climate-Shield"
-              >Project repository <span aria-hidden="true">↗</span></a
+              >Project repository </a
             ><a
               href="https://www.linkedin.com/posts/chunzhangliu_thrilled-to-share-that-our-team-won-first-activity-7257917516184797186-lrux"
-              >Hackathon announcement <span aria-hidden="true">↗</span></a
-            >
+              >Hackathon announcement
+            </a>
           </div>
         </article>
         <article
@@ -195,22 +186,20 @@
         >
           <div class="project-heading">
             <div>
-              <p class="eyebrow">03 / AI infrastructure</p>
               <h3>LLM Inference on Kubernetes</h3>
               <p class="project-subtitle">
-                Learning what makes GPU workloads different.
+                Running vLLM on a single-GPU Kubernetes cluster.
               </p>
             </div>
-            <span class="project-kind">Independent project</span>
           </div>
           <div class="project-body">
             <div>
               <p>
-                A small, single-GPU environment for deploying a vLLM service and
-                investigating startup behavior, resource limits, and failure
-                recovery. This is an experimental learning project.
+                I deployed a vLLM service on Kubernetes and documented problems
+                with model startup and GPU scheduling. This is a personal
+                learning project.
               </p>
-              <h4>What I explored</h4>
+              <h4>What I worked on</h4>
               <ul class="detail-list">
                 <li>
                   Served Qwen2.5-1.5B-Instruct through an OpenAI-compatible API
@@ -232,14 +221,12 @@
               <p class="eyebrow">Independent project</p>
               <p>2026</p>
               <p>Python · vLLM · Kubernetes<br />Prometheus · Grafana</p>
-              <p>Focus: deployment reliability and GPU capacity.</p>
             </aside>
           </div>
           <div class="link-row">
             <a href="https://github.com/Prostream/llm-inference-on-k8s"
-              >Repository &amp; engineering notes
-              <span aria-hidden="true">↗</span></a
-            >
+              >Repository &amp; notes
+            </a>
           </div>
         </article>
       </section>
@@ -249,7 +236,6 @@
         aria-labelledby="publication-title"
       >
         <div class="section-heading">
-          <p class="eyebrow">Research</p>
           <h2 id="publication-title">Publication</h2>
         </div>
         <article>
@@ -258,11 +244,6 @@
             DroneRanger: Simulation-Guided UAV Framework for Autonomous Wildlife
             Deterrence
           </h3>
-          <p class="muted">
-            Bridging PX4, ROS 2, and Unity through a Simulation-Driven Control
-            Architecture that Enables Autonomous Navigation And Obstacle-Aware
-            Wildlife Deterrence
-          </p>
           <p>
             Zhipeng Ling, Renxiang Yin, <strong>Chunzhang Liu</strong>, Xiaoman
             Zou, Jiading Zhou, Ilmi Yoon, and Tanishq Pradhan.
@@ -272,8 +253,8 @@
             Conference, pp. 1221–1227.
           </p>
           <a href="https://doi.org/10.1109/CCWC67433.2026.11393823"
-            >Read the paper <span aria-hidden="true">↗</span></a
-          >
+            >Read the paper
+          </a>
         </article>
       </section>
       <section
@@ -282,7 +263,6 @@
         aria-labelledby="patent-title"
       >
         <div class="section-heading">
-          <p class="eyebrow">Intellectual property</p>
           <h2 id="patent-title">Patent</h2>
         </div>
         <article>
@@ -292,23 +272,16 @@
             equipment and medium
           </h3>
           <a href="https://patents.google.com/?q=CN114091586"
-            >Find the patent record <span aria-hidden="true">↗</span></a
-          >
+            >Find the patent record
+          </a>
         </article>
       </section>
       <section class="contact-section" aria-labelledby="work-contact-title">
         <div>
-          <h2 id="work-contact-title">
-            Want to talk about one of these projects?
-          </h2>
-          <p>
-            I’d be happy to discuss the engineering decisions and what I
-            learned.
-          </p>
+          <h2 id="work-contact-title">Contact</h2>
+          <p>Feel free to reach out!</p>
         </div>
-        <a class="primary-link" href="mailto:liucz3@outlook.com"
-          >Get in touch <span aria-hidden="true">↗</span></a
-        >
+        <a href="mailto:liucz3@outlook.com">liucz3@outlook.com</a>
       </section>
     </main>
     <footer class="site-footer container">

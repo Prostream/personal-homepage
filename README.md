@@ -2,7 +2,7 @@
 
 - Author: Chunzhang Liu
 - Website: https://prostream.github.io/personal-homepage/
-- Course link: TO ADD
+- Course: [CS 5610 Web Development, Fall 2026](https://johnguerra.co/classes/webDevelopment_online_fall_2026/index.html)
 - Goal: introduce my education, experience and projects for job searching and networking.
 - [Design document and mockups](docs/design.md)
 - License: MIT
@@ -31,13 +31,26 @@ Edit the HTML files to change text, `css/styles.css` to change the appearance, a
 
 The AI page is separate: edit `css/ai.css` for its layout and atmosphere, or `js/ai.js` for the three models and movement. Its background is `images/mountain-sunrise-v2.png`. Drag a model or use the arrow keys while it is focused; Home resets its orientation. Pause motion freezes the background and models while keeping chapter selection available.
 
-Prettier is optional for editing. To format the files, run `npm install` and then `npm run format`. This creates a local `node_modules` folder containing development tools; the website does not use it, and Git ignores it.
+For the assignment checks, use Node.js 20.19 or later:
+
+```sh
+npm install
+npm run format
+npm run check
+```
+
+`check` runs ESLint and Prettier. These are development tools only; the website has no runtime dependencies. The local `node_modules` folder is ignored by Git and is not needed to view the website.
 
 Push changes to `codex/personal-homepage` to update GitHub Pages.
 
 ## Assignment notes
 
-ESLint configuration has been removed in this simplified version, so that rubric item is not currently met. The course link, narrated demo video and course code review still need to be completed.
+- [Rubric checklist](docs/rubric.md)
+- Public narrated video:
+- Google Form submission:
+- Course code review: pending.
+
+ESLint uses the recommended rules. A separate class configuration was not found in the public course materials, so the exact class-config requirement still needs confirmation.
 
 ## Use of generative AI
 
