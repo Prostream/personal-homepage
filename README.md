@@ -2,6 +2,7 @@
 
 - Author: Chunzhang Liu
 - Website: https://prostream.github.io/personal-homepage/
+- Demo video: [Watch on YouTube](https://www.youtube.com/watch?v=vjmPlJ4CS5g&t=7s)
 - Course: [CS 5610 Web Development, Fall 2026](https://johnguerra.co/classes/webDevelopment_online_fall_2026/index.html)
 - Goal: introduce my education, experience and projects for job searching and networking.
 - [Design document slides](https://docs.google.com/presentation/d/1HsvbdmB9rf6omnEecEpRZbJb1_QLXM8qD5-E40Muh4M/edit)
@@ -45,7 +46,6 @@ Push changes to `codex/personal-homepage` to update GitHub Pages.
 
 ## Assignment notes
 
-- Public narrated video: [Watch the project demo on YouTube](https://www.youtube.com/watch?v=vjmPlJ4CS5g&t=7s)
 - Google Form submission:
 - Course code review: pending.
 
