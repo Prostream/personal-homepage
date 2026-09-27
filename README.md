@@ -4,7 +4,6 @@
 - Website: https://prostream.github.io/personal-homepage/
 - Course: [CS 5610 Web Development, Fall 2026](https://johnguerra.co/classes/webDevelopment_online_fall_2026/index.html)
 - Goal: introduce my education, experience and projects for job searching and networking.
-- [Design document and mockups](docs/design.md)
 - [Design document slides](https://docs.google.com/presentation/d/1HsvbdmB9rf6omnEecEpRZbJb1_QLXM8qD5-E40Muh4M/edit)
 - License: MIT
 
@@ -46,7 +45,6 @@ Push changes to `codex/personal-homepage` to update GitHub Pages.
 
 ## Assignment notes
 
-- [Rubric checklist](docs/rubric.md)
 - Public narrated video: [Watch the project demo on YouTube](https://www.youtube.com/watch?v=vjmPlJ4CS5g&t=7s)
 - Google Form submission:
 - Course code review: pending.
@@ -57,6 +55,6 @@ Push changes to `codex/personal-homepage` to update GitHub Pages.
 
 I used OpenAI Codex (GPT-6 family; exact version unavailable) to assist with HTML, CSS, JavaScript, and documentation. Its built-in image tool generated the landscape background; the image-model version was not provided.
 
-I supplied my personal background and requested a five-chapter story with readable text and three interactive 3D objects. Codex drafted English Markdown plans for me to review before implementation. We then refined the page through my feedback and browser checks. The prompts and design decisions are recorded in the [initial plan](docs/ai-page-plan.md) and [revised plan](docs/ai-page-v2-plan.md).
+I supplied my personal background and requested a five-chapter story with readable text and three interactive 3D objects. Codex drafted English Markdown plans for me to review before implementation. We then refined the page through my feedback and browser checks.
 
 [Sunseto](https://sunset.mengto.here.now/) inspired the warm landscape, drifting petals, and draggable objects. The final page uses native HTML, CSS, JavaScript, and WebGL with a local AI-generated image.
