@@ -102,7 +102,7 @@ function roundedBox(mesh, center, size, color, radius = 0.08, glow = 0) {
         p[u] = us[i];
         p[v] = vs[j];
         const core = p.map((value, k) =>
-          clamp(value, -half[k] + r, half[k] - r),
+          clamp(value, -half[k] + r, half[k] - r)
         );
         const delta = p.map((value, k) => value - core[k]);
         const length = Math.hypot(...delta) || 1;
@@ -168,7 +168,7 @@ function computer() {
     [2.11, 1.31, 0.035],
     [0.04, 0.27, 0.29],
     0.017,
-    0.2,
+    0.2
   );
   roundedBox(mesh, [0, -0.81, -0.09], [0.37, 0.55, 0.4], cream);
   roundedBox(mesh, [0, -1.04, 0.02], [1.6, 0.16, 0.94], cream);
@@ -180,7 +180,7 @@ function computer() {
         [-1.1 + col * 0.2, -1.07, 0.65 + row * 0.16],
         [0.158, 0.065, 0.108],
         [0.57, 0.62, 0.59],
-        0.024,
+        0.024
       );
     }
   for (let i = 0; i < 4; i++)
@@ -190,7 +190,7 @@ function computer() {
       [0.91 - i * 0.12, 0.035, 0.01],
       mint,
       0.005,
-      1,
+      1
     );
   roundedBox(mesh, [-0.79, -0.1, 0.43], [0.12, 0.075, 0.012], gold, 0.006, 1);
   sphere(mesh, [1.04, -0.45, 0.383], 0.038, mint, 1, 8, 12);
@@ -229,7 +229,7 @@ function globe() {
         lines,
         [r * Math.cos(a), y, r * Math.sin(a)],
         [r * Math.cos(b), y, r * Math.sin(b)],
-        [0.67, 0.84, 0.74],
+        [0.67, 0.84, 0.74]
       );
     }
   }
@@ -245,7 +245,7 @@ function globe() {
         lines,
         point((i * Math.PI) / 48),
         point(((i + 1) * Math.PI) / 48),
-        [0.67, 0.84, 0.74],
+        [0.67, 0.84, 0.74]
       );
   }
   // A gold orbit and two raised markers make the journey visible from any angle.
@@ -254,7 +254,7 @@ function globe() {
       lines,
       orbit((i * Math.PI) / 64),
       orbit(((i + 1) * Math.PI) / 64),
-      gold,
+      gold
     );
   sphere(mesh, [0.61, 0.75, 0.71], 0.067, gold, 0.3, 12, 16);
   sphere(mesh, [-0.72, 0.43, 0.83], 0.067, gold, 0.3, 12, 16);
@@ -286,7 +286,7 @@ function cloud() {
         [0, 0.43 - row * 0.27, 0.324],
         [0.44, 0.16, 0.028],
         dark,
-        0.014,
+        0.014
       );
       sphere(mesh, [0.14, 0.43 - row * 0.27, 0.345], 0.027, mint, 1, 8, 12);
       roundedBox(
@@ -294,7 +294,7 @@ function cloud() {
         [-0.06, 0.43 - row * 0.27, 0.345],
         [0.19, 0.022, 0.015],
         [0.45, 0.64, 0.61],
-        0.007,
+        0.007
       );
     }
     parts.push({
@@ -344,10 +344,10 @@ function start() {
     "u_local",
   ];
   const uniforms = Object.fromEntries(
-    names.map((name) => [name, gl.getUniformLocation(program, name)]),
+    names.map((name) => [name, gl.getUniformLocation(program, name)])
   );
   const attributes = ["a_position", "a_normal", "a_color", "a_glow"].map(
-    (name) => gl.getAttribLocation(program, name),
+    (name) => gl.getAttribLocation(program, name)
   );
   const models = [computer(), globe(), cloud()];
   const markerData = [];
@@ -417,7 +417,7 @@ function start() {
         gl.FLOAT,
         false,
         40,
-        i * 12,
+        i * 12
       );
     });
     gl.uniform3fv(uniforms.u_offset, offset);
@@ -461,7 +461,7 @@ function start() {
     gl.uniform1f(uniforms.u_bob, Math.sin(time * 1.1) * 0.055);
     gl.uniform1f(
       uniforms.u_scale,
-      Math.min(1.04, (canvas.width / canvas.height) * 1.03),
+      Math.min(1.04, (canvas.width / canvas.height) * 1.03)
     );
     const wires = [];
     for (const part of models[modelIndex()].parts) {
@@ -536,7 +536,7 @@ function start() {
       chapter.hidden = i !== index;
     });
     buttons.forEach((button, i) =>
-      button.setAttribute("aria-pressed", String(i === index)),
+      button.setAttribute("aria-pressed", String(i === index))
     );
     document.querySelector(".object-caption").textContent = captions[index];
     document.querySelector(".object-number").textContent = [
@@ -578,12 +578,12 @@ function start() {
       pose.ty = clamp(
         pointer.tx + (event.clientX - pointer.x) * 0.008,
         -1.3,
-        1.3,
+        1.3
       );
       pose.tx = clamp(
         pointer.ty + (event.clientY - pointer.y) * 0.005,
         -0.55,
-        0.55,
+        0.55
       );
     } else if (event.pointerType === "mouse") {
       const b = area.getBoundingClientRect();
@@ -603,7 +603,7 @@ function start() {
     if (
       paused ||
       !["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "Home"].includes(
-        event.key,
+        event.key
       )
     )
       return;
@@ -620,8 +620,8 @@ function start() {
   area.addEventListener("blur", release);
   buttons.forEach((button) =>
     button.addEventListener("click", () =>
-      select(Number(button.dataset.chapter)),
-    ),
+      select(Number(button.dataset.chapter))
+    )
   );
   motionButton.addEventListener("click", () => setPaused(!paused));
   preference.addEventListener("change", (event) => setPaused(event.matches));
@@ -648,7 +648,7 @@ try {
 } catch (error) {
   console.warn(
     "The 3D scene could not start. Showing the full story.",
-    error.message,
+    error.message
   );
   fallback();
 }

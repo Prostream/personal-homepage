@@ -11,7 +11,7 @@ function initJourney() {
     buttons.forEach((button) => {
       button.setAttribute(
         "aria-pressed",
-        String(button.dataset.stage === stageName),
+        String(button.dataset.stage === stageName)
       );
     });
     stages.forEach((stage) => {
@@ -45,7 +45,7 @@ function initProjectFilters() {
     buttons.forEach((button) => {
       button.setAttribute(
         "aria-pressed",
-        String(button.dataset.filter === category),
+        String(button.dataset.filter === category)
       );
     });
     status.textContent =
@@ -56,14 +56,14 @@ function initProjectFilters() {
 
   buttons.forEach((button) => {
     button.addEventListener("click", () =>
-      filterProjects(button.dataset.filter),
+      filterProjects(button.dataset.filter)
     );
   });
 
   // A direct link to a project must work even after another filter was selected.
   function revealLinkedProject() {
     const project = projects.find(
-      (item) => `#${item.id}` === window.location.hash,
+      (item) => `#${item.id}` === window.location.hash
     );
     if (!project) return;
     filterProjects("all");

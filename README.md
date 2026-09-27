@@ -50,7 +50,7 @@ Push changes to `codex/personal-homepage` to update GitHub Pages.
 - Google Form submission:
 - Course code review: pending.
 
-ESLint uses the recommended rules. A separate class configuration was not found in the public course materials, so the exact class-config requirement still needs confirmation.
+`eslint.config.js` is the class configuration downloaded from Slack, with formatting changes only. The Prettier settings in `package.json` match its formatting rules. `npm run check` passes: ESLint reports no errors or warnings, and Prettier formatting passes.
 
 ## Use of generative AI
 

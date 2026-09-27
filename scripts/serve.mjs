@@ -20,7 +20,7 @@ createServer(async (request, response) => {
     const pathname = decodeURIComponent(url.pathname);
     const file = path.resolve(
       root,
-      `.${pathname.endsWith("/") ? `${pathname}index.html` : pathname}`,
+      `.${pathname.endsWith("/") ? `${pathname}index.html` : pathname}`
     );
     const relative = path.relative(root, file);
     if (relative.startsWith("..") || path.isAbsolute(relative)) {
@@ -38,5 +38,5 @@ createServer(async (request, response) => {
     response.writeHead(404, { "Content-Type": "text/plain" }).end("Not found");
   }
 }).listen(port, "127.0.0.1", () =>
-  console.log(`Local preview: http://127.0.0.1:${port}`),
+  console.log(`Local preview: http://127.0.0.1:${port}`)
 );
